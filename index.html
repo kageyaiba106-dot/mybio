@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>KAGE — Personal Website</title>
+    <meta
+      name="description"
+      content="KAGE's personal website — gamer, beginner frontend developer and anime fan from Uzbekistan."
+    />
+    <meta name="theme-color" content="#080b12" />
+    <meta property="og:title" content="KAGE — Personal Website" />
+    <meta property="og:description" content="Gamer / Developer / Anime" />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23080b12'/%3E%3Ctext x='50' y='68' font-size='64' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%234b8cff'%3EK%3C/text%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="loader" id="loader" aria-label="Loading">
+      <div class="loader-logo">K<span>.</span></div>
+      <div class="loader-line"><span></span></div>
+      <p>INITIALIZING KAGE</p>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="navbar">
+      <a class="logo" href="#home" aria-label="KAGE home">KAGE<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#gaming" data-i18n="navGaming">Gaming</a>
+        <a href="#anime" data-i18n="navAnime">Anime</a>
+        <a href="#skills" data-i18n="navSkills">Skills</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button
+          class="icon-button"
+          id="languageToggle"
+          aria-label="Change language"
+        >
+          RU
+        </button>
+        <button
+          class="icon-button theme-button"
+          id="themeToggle"
+          aria-label="Change theme"
+        >
+          <span id="themeIcon">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            <span data-i18n="heroEyebrow">PERSONAL SPACE / 001</span>
+          </div>
+
+          <p class="hero-greeting" data-i18n="greeting">Hello, I'm</p>
+          <h1>KAGE<span class="accent">.</span></h1>
+
+          <div class="typing-line">
+            <span id="typingText">Gamer</span
+            ><span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description" data-i18n="heroDescription">
+            A calm mind. A clear goal. Always learning, always improving.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button button-primary" href="#about" data-i18n="discover"
+              >Discover more ↘</a
+            >
+            <a
+              class="button button-secondary"
+              href="#contact"
+              data-i18n="contactMe"
+              >Contact me</a
+            >
+          </div>
+
+          <div class="hero-meta">
+            <span><span class="meta-icon">⌖</span> Tashkent, Uzbekistan</span>
+            <span
+              ><span class="status-dot" id="heroStatusDot"></span
+              ><span id="heroStatusText">Online</span></span
+            >
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="KAGE monogram">
+          <div class="visual-ring ring-one"></div>
+          <div class="visual-ring ring-two"></div>
+          <div class="visual-card">
+            <span class="visual-index">K / 001</span>
+            <div class="monogram">K<span>.</span></div>
+            <div class="visual-divider"></div>
+            <p>FOCUS<span> · </span>DISCIPLINE<span> · </span>GROWTH</p>
+          </div>
+          <span class="floating-label label-top">DEVELOPER</span>
+          <span class="floating-label label-bottom">GAMER / ANIME</span>
+        </div>
+
+        <a class="scroll-hint" href="#about">
+          <span data-i18n="scroll">SCROLL TO EXPLORE</span><span>↓</span>
+        </a>
+      </section>
+
+      <section class="section section-block" id="about">
+        <div class="section-heading reveal">
+          <span class="section-number">01 / ABOUT</span>
+          <h2 data-i18n="aboutTitle">A little about <span>me.</span></h2>
+          <p data-i18n="aboutIntro">The person behind the username.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="panel about-main reveal">
+            <span class="panel-label" data-i18n="whoAmI">WHO AM I?</span>
+            <h3 data-i18n="aboutHeadline">
+              Learning today.<br />Building tomorrow.
+            </h3>
+            <p data-i18n="aboutText">
+              I'm Kage, from Uzbekistan. I'm interested in programming, gaming
+              and anime. I'm a beginner frontend developer, learning how to turn
+              ideas into useful, clean and modern websites.
+            </p>
+            <div class="tag-list">
+              <span>Frontend</span><span>Gaming</span><span>Anime</span>
+            </div>
+          </article>
+
+          <article class="panel info-panel reveal">
+            <span class="panel-label" data-i18n="quickInfo">QUICK INFO</span>
+            <div class="info-row">
+              <span data-i18n="infoName">Name</span><strong>Kage</strong>
+            </div>
+            <div class="info-row">
+              <span data-i18n="infoLocation">Location</span
+              ><strong>Tashkent, Uzbekistan</strong>
+            </div>
+            <div class="info-row">
+              <span data-i18n="infoRole">Focus</span
+              ><strong>Gaming / Development</strong>
+            </div>
+            <div class="info-row">
+              <span data-i18n="infoLevel">Developer level</span
+              ><strong data-i18n="beginner">Beginner</strong>
+            </div>
+            <div class="info-row">
+              <span data-i18n="infoStatus">Status</span>
+              <strong class="status-value"
+                ><span class="status-dot"></span
+                ><span id="aboutStatusText">Online</span></strong
+              >
+            </div>
+          </article>
+        </div>
+
+        <article class="goal-card reveal">
+          <div>
+            <span class="panel-label" data-i18n="currentGoal"
+              >CURRENT GOAL</span
+            >
+            <h3 data-i18n="goalTitle">Become a professional developer.</h3>
+            <p data-i18n="goalText">
+              Learn the fundamentals, build real projects and keep improving.
+            </p>
+          </div>
+          <span class="goal-mark">↗</span>
+        </article>
+
+        <blockquote class="quote-card reveal">
+          <span class="quote-mark">“</span>
+          <p data-i18n="quote">
+            Discipline beats motivation when motivation disappears.
+          </p>
+          <span class="quote-credit">— KAGE / MINDSET</span>
+        </blockquote>
+      </section>
+
+      <section class="section section-block" id="gaming">
+        <div class="section-heading reveal">
+          <span class="section-number">02 / GAMING</span>
+          <h2 data-i18n="gamingTitle">Game <span>mode.</span></h2>
+          <p data-i18n="gamingIntro">Competitive mindset, calm decisions.</p>
+        </div>
+
+        <article class="game-card reveal">
+          <div class="game-cover standoff-cover">
+            <div class="cover-grid"></div>
+            <span class="cover-index">GAME / 001</span>
+            <div class="cover-title">STANDOFF<span> 2</span></div>
+            <span class="cover-caption">TACTICS · TEAMWORK · PRECISION</span>
+          </div>
+
+          <div class="game-info">
+            <div class="game-title-row">
+              <div>
+                <span class="panel-label">MAIN GAME</span>
+                <h3>Standoff 2</h3>
+              </div>
+              <span class="rank-badge">ELITE</span>
+            </div>
+
+            <p data-i18n="gameDescription">
+              Five years in the game. Focused on teamwork, support and smart
+              decisions.
+            </p>
+
+            <div class="game-stats">
+              <div>
+                <span data-i18n="gameRole">Role</span
+                ><strong>Support / Captain / CEO</strong>
+              </div>
+              <div>
+                <span data-i18n="gameRank">Rank</span><strong>Elite</strong>
+              </div>
+              <div>
+                <span data-i18n="gameExperience">Experience</span
+                ><strong>5 years</strong>
+              </div>
+              <div>
+                <span data-i18n="gameNickname">Nickname</span
+                ><strong>Kage</strong>
+              </div>
+            </div>
+
+            <div class="tag-list">
+              <span>Teamwork</span><span>Strategy</span
+              ><span>Communication</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="section-subheading reveal">
+          <h3 data-i18n="galleryTitle">Gaming gallery</h3>
+          <p data-i18n="galleryIntro">
+            A visual corner for screenshots and memorable moments.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <button
+            class="gallery-item gallery-one reveal"
+            data-gallery="0"
+            aria-label="Open gallery image 1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85"
+              alt="Gaming setup"
+            />
+            <span>01 / GAMING</span>
+          </button>
+          <button
+            class="gallery-item gallery-two reveal"
+            data-gallery="1"
+            aria-label="Open gallery image 2"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=900&q=85"
+              alt="Gaming equipment"
+            />
+            <span>02 / SETUP</span>
+          </button>
+          <button
+            class="gallery-item gallery-three reveal"
+            data-gallery="2"
+            aria-label="Open gallery image 3"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=85"
+              alt="Gaming screen"
+            />
+            <span>03 / PLAY</span>
+          </button>
+        </div>
+        <p class="small-note" data-i18n="galleryNote">
+          Demo images — replace them with your own screenshots.
+        </p>
+
+        <div class="section-subheading reveal">
+          <h3 data-i18n="nowPlaying">Now playing</h3>
+        </div>
+        <div class="now-playing panel reveal">
+          <span class="playing-icon">▶</span>
+          <div>
+            <strong>Standoff 2</strong>
+            <p data-i18n="playingCaption">Current game · Competitive mode</p>
+          </div>
+          <span class="playing-equalizer" aria-label="Playing"
+            ><i></i><i></i><i></i><i></i
+          ></span>
+        </div>
+      </section>
+
+      <section class="section section-block" id="anime">
+        <div class="section-heading reveal">
+          <span class="section-number">03 / ANIME</span>
+          <h2 data-i18n="animeTitle">Anime <span>universe.</span></h2>
+          <p data-i18n="animeIntro">
+            Stories, strategy and unforgettable characters.
+          </p>
+        </div>
+
+        <div class="anime-grid">
+          <article class="anime-card reveal">
+            <div class="anime-art blue-lock-art">
+              <span class="anime-index">ANIME / 001</span>
+              <div class="anime-symbol">11</div>
+              <span class="anime-art-title">BLUE LOCK</span>
+            </div>
+            <div class="anime-info">
+              <span class="panel-label" data-i18n="favoriteAnime"
+                >FAVORITE ANIME</span
+              >
+              <h3>Blue Lock</h3>
+              <p data-i18n="blueLockText">
+                Competition, ambition and the drive to improve.
+              </p>
+            </div>
+          </article>
+
+          <article class="anime-card reveal">
+            <div class="anime-art death-note-art">
+              <span class="anime-index">ANIME / 002</span>
+              <div class="anime-symbol death-symbol">L</div>
+              <span class="anime-art-title">DEATH NOTE</span>
+            </div>
+            <div class="anime-info">
+              <span class="panel-label" data-i18n="favoriteAnime"
+                >FAVORITE ANIME</span
+              >
+              <h3>Death Note</h3>
+              <p data-i18n="deathNoteText">
+                Psychological battles, deduction and difficult choices.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="character-panel panel reveal">
+          <span class="panel-label" data-i18n="favoriteCharacters"
+            >FAVORITE CHARACTERS</span
+          >
+          <div class="character-row">
+            <div>
+              <span class="character-letter">K</span
+              ><span><strong>Kira</strong><small>Death Note</small></span>
+            </div>
+            <div>
+              <span class="character-letter">L</span
+              ><span><strong>L</strong><small>Death Note</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-block" id="skills">
+        <div class="section-heading reveal">
+          <span class="section-number">04 / DEVELOPMENT</span>
+          <h2 data-i18n="skillsTitle">Building my <span>skills.</span></h2>
+          <p data-i18n="skillsIntro">
+            A beginner today, a better developer tomorrow.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          <article class="panel skills-panel reveal">
+            <span class="panel-label" data-i18n="mySkills">MY SKILLS</span>
+            <h3 data-i18n="techTitle">Technologies</h3>
+            <p data-i18n="techDescription">
+              Currently learning the fundamentals of frontend development.
+            </p>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span class="skill-icon html-icon">5</span
+                ><span><strong>HTML</strong><small>Structure</small></span
+                ><span class="skill-state">LEARNING</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-icon css-icon">3</span
+                ><span><strong>CSS</strong><small>Styling & layout</small></span
+                ><span class="skill-state">LEARNING</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-icon js-icon">JS</span
+                ><span
+                  ><strong>JavaScript</strong><small>Interactivity</small></span
+                ><span class="skill-state">LEARNING</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-icon react-icon">R</span
+                ><span
+                  ><strong>React</strong><small>Future learning</small></span
+                ><span class="skill-state">NEXT</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-icon ts-icon">TS</span
+                ><span
+                  ><strong>TypeScript</strong
+                  ><small>Future learning</small></span
+                ><span class="skill-state">NEXT</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-icon next-icon">N</span
+                ><span
+                  ><strong>Next.js</strong><small>Future learning</small></span
+                ><span class="skill-state">NEXT</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel achievements-panel reveal">
+            <span class="panel-label" data-i18n="achievements"
+              >ACHIEVEMENTS</span
+            >
+            <h3 data-i18n="progressTitle">Progress over perfection.</h3>
+            <div class="achievement-item">
+              <span class="achievement-icon">01</span>
+              <div>
+                <strong data-i18n="achievementOne">Frontend foundations</strong>
+                <p data-i18n="achievementOneText">
+                  Learning HTML, CSS and JavaScript.
+                </p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <span class="achievement-icon">02</span>
+              <div>
+                <strong data-i18n="achievementTwo">Website building</strong>
+                <p data-i18n="achievementTwoText">
+                  Practising through personal web projects.
+                </p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <span class="achievement-icon">03</span>
+              <div>
+                <strong data-i18n="achievementThree"
+                  >Continuous learning</strong
+                >
+                <p data-i18n="achievementThreeText">
+                  Working towards becoming a professional developer.
+                </p>
+              </div>
+            </div>
+            <div class="goal-mini">
+              <span class="status-dot"></span
+              ><span data-i18n="goalMini"
+                >Current goal: Professional developer</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-block contact-section" id="contact">
+        <div class="section-heading reveal">
+          <span class="section-number">05 / CONTACT</span>
+          <h2 data-i18n="contactTitle">Let's <span>connect.</span></h2>
+          <p data-i18n="contactIntro">Have something to say? Find me here.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-left reveal">
+            <a
+              class="contact-link"
+              href="https://t.me/kagevx"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-symbol">TG</span>
+              <span><small>TELEGRAM</small><strong>@kagevx</strong></span>
+              <span class="contact-arrow">↗</span>
+            </a>
+            <button class="contact-link copy-link" data-copy="@kagevx">
+              <span class="contact-symbol">CP</span>
+              <span
+                ><small data-i18n="copyTelegram">COPY TELEGRAM</small
+                ><strong>@kagevx</strong></span
+              >
+              <span class="contact-arrow">⧉</span>
+            </button>
+            <a
+              class="contact-link"
+              href="https://www.tiktok.com/@kagevxy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-symbol">TT</span>
+              <span><small>TIKTOK</small><strong>@kagevxy</strong></span>
+              <span class="contact-arrow">↗</span>
+            </a>
+            <button class="contact-link copy-link" data-copy="@kagevxy">
+              <span class="contact-symbol">CP</span>
+              <span
+                ><small data-i18n="copyTikTok">COPY TIKTOK</small
+                ><strong>@kagevxy</strong></span
+              >
+              <span class="contact-arrow">⧉</span>
+            </button>
+          </div>
+
+          <form class="panel contact-form reveal" id="contactForm">
+            <span class="panel-label" data-i18n="sendMessage"
+              >SEND A MESSAGE</span
+            >
+            <label for="senderName" data-i18n="yourName">Your name</label>
+            <input
+              id="senderName"
+              name="name"
+              type="text"
+              maxlength="60"
+              required
+              placeholder="Name"
+            />
+            <label for="senderEmail" data-i18n="yourEmail">Your email</label>
+            <input
+              id="senderEmail"
+              name="email"
+              type="email"
+              maxlength="120"
+              required
+              placeholder="you@example.com"
+            />
+            <label for="senderMessage" data-i18n="yourMessage">Message</label>
+            <textarea
+              id="senderMessage"
+              name="message"
+              maxlength="1000"
+              required
+              rows="4"
+              placeholder="Write your message..."
+            ></textarea>
+            <button
+              class="button button-primary form-submit"
+              id="submitButton"
+              type="submit"
+              data-i18n="sendButton"
+            >
+              Send message ↗
+            </button>
+            <p class="form-note" data-i18n="formNote">
+              Demo form: messages are not sent to a server.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="logo" href="#home">KAGE<span>.</span></a>
+      <p>
+        © <span id="year"></span> KAGE.
+        <span data-i18n="footerText">Built with focus.</span>
+      </p>
+      <div class="footer-right">
+        <span data-i18n="visits">VISITS</span>
+        <strong id="visitCount">—</strong>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      ↑
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Gallery preview"
+    >
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image"
+      >
+        ×
+      </button>
+      <button
+        class="lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
+      <img id="lightboxImage" src="" alt="Gallery preview" />
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+        ›
+      </button>
+    </div>
+  </body>
+</html>
